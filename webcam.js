@@ -87,10 +87,10 @@ navigator.mediaDevices.getUserMedia({ video: true, audio: false }).then(function
     video.play();
 
     roboflow.auth({
-        publishable_key: "rf_Xxjo5HHl3xYl7RsX2MH6Roeqywg1"
+        publishable_key: "rf_148OafwzfTgRMKEvv0desWVSsph2"
     }).load({
-        model: "isl-using-yolov5-0vwmd",
-        version: 5
+        model: "isl-yolov5",
+        version: 1
     }).then(function(model) {
         setInterval(function() {
             model.detect(video).then(function(predictions) {
